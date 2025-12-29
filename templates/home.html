@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home - Academic Abstract Classifier</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Welcome, {{ user }} 👋</h1>
+        <p class="subtitle">
+          You are logged in. From here you can go to the abstract classifier or sign out.
+        </p>
+      </header>
+
+      <section class="card">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="/" style="text-decoration: none;">
+            <button type="button">Go to Classifier</button>
+          </a>
+          <a href="/logout" style="text-decoration: none;">
+            <button type="button">Logout</button>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>
+
+

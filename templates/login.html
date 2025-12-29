@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Academic Abstract Classifier</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Login</h1>
+        <p class="subtitle">
+          Enter your credentials to continue.
+        </p>
+      </header>
+
+      <section class="card card--auth">
+        <form method="post" action="/login">
+          <label for="username">Username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            required
+            value="{{ username or '' }}"
+          />
+
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+          />
+
+          <button type="submit">Sign in</button>
+        </form>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+      </section>
+    </main>
+  </body>
+  </html>
+
+

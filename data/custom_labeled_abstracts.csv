@@ -1,0 +1,18 @@
+abstract,field
+"Deep neural networks have achieved state-of-the-art results on many vision benchmarks. In this paper we introduce a convolutional architecture with attention mechanisms to improve object recognition in natural images.",AI
+"We propose a reinforcement learning algorithm that combines model-based planning with policy gradients to solve continuous control tasks more efficiently than existing methods.",AI
+"Large language models can perform complex reasoning tasks. We fine-tune a transformer on dialogue data to build a conversational assistant that answers programming questions.",AI
+"Early detection of cardiovascular disease is essential to reduce mortality. Using electronic health record data, we train a gradient-boosted model to predict 5-year risk of heart failure.",Healthcare
+"Radiologists must review a large number of chest X-rays every day. We develop a deep learning system that flags images with a high probability of pneumonia for priority reading.",Healthcare
+"Continuous glucose monitoring generates rich time-series data. We present a sequence model that forecasts dangerous hypoglycemic events up to 60 minutes in advance.",Healthcare
+"Subscription services struggle with customer churn. We design a survival analysis model that uses product usage and billing history to estimate the probability that a customer will cancel in the next 30 days.",Business
+"Online retailers need accurate demand forecasts. Our gradient-boosted trees model predicts weekly sales using promotions, holidays and historical sales patterns.",Business
+"High-frequency trading algorithms react to market microstructure. We build a model that predicts short-term price movements from limit order book data.",Business
+"Climate change is increasing the frequency of extreme rainfall events. Using a regional climate model, we simulate future precipitation patterns and quantify flood risk for a coastal city.",Environmental science
+"Urban heat islands cause higher temperatures in dense city centers. We analyse satellite temperature data and land cover maps to identify which green infrastructure strategies most effectively reduce heat.",Environmental science
+"Air quality sensors measure particulate matter across a metropolitan region. We train a spatio-temporal model to forecast pollution levels and identify neighborhoods with chronic exposure.",Healthcare
+"Social networks influence how information spreads online. We study retweet cascades on a microblogging platform and show that user centrality is strongly correlated with cascade size.",Other
+"Classical music recommendation systems often ignore musical structure. We propose a content-based model that uses harmonic progressions and instrumentation to group similar pieces.",Other
+"University students form informal friendship networks. Using survey data, we build graph-based models to study how network position relates to academic performance.",Other
+
+

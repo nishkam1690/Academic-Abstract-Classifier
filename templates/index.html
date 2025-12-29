@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Academic Abstract Classifier</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Academic Abstract Classifier</h1>
+        <p class="subtitle">
+          Paste any research abstract and get an instant prediction of its field (AI, healthcare, business, environmental science, etc.).
+        </p>
+      </header>
+
+      <section class="card">
+        <form method="post">
+          <label for="abstract">Abstract</label>
+          <textarea
+            id="abstract"
+            name="abstract"
+            rows="8"
+            minlength="20"
+            required
+          >{{ abstract or "" }}</textarea>
+          <button type="submit">Classify Abstract</button>
+        </form>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+      </section>
+
+      {% if result %}
+      <section class="card result">
+        <h2>Prediction</h2>
+        <p class="prediction">
+          {{ result.predicted_field }}
+          <span class="confidence">
+            (confidence: {{ '%.2f' | format(result.confidence * 100) }}%)
+          </span>
+        </p>
+
+        <div class="topk">
+          <h3>Top Candidates</h3>
+          <ul>
+            {% for item in result.top_k %}
+            <li>
+              <span>{{ item.field }}</span>
+              <span>{{ '%.1f' | format(item.confidence * 100) }}%</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <details>
+          <summary>Submitted abstract</summary>
+          <p>{{ result.abstract }}</p>
+        </details>
+      </section>
+      {% endif %}
+    </main>
+
+    <footer>
+      <p>
+        Model trained on a sample from the ArXiv Abstracts dataset. Swap in the full dataset for higher-quality predictions.
+      </p>
+    </footer>
+  </body>
+</html>
+
